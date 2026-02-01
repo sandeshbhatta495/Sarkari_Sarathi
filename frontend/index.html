@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkari Sarathi - AI Digital Scribe</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Sarkari Sarathi</h1>
+            <p class="subtitle">Your AI Digital Scribe</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Service Selection -->
+            <section class="service-section">
+                <h2>Select Service</h2>
+                <div class="service-options">
+                    <button class="service-btn" data-service="electricity_meter">
+                        <span class="icon">⚡</span>
+                        <span>Electricity Meter Connection</span>
+                    </button>
+                    <!-- Add more services as needed -->
+                </div>
+            </section>
+
+            <!-- Input Section -->
+            <section class="input-section" id="inputSection" style="display: none;">
+                <h2>Provide Your Details</h2>
+                
+                <!-- Voice Input -->
+                <div class="input-mode">
+                    <button id="voiceBtn" class="mode-btn">
+                        🎤 Speak
+                    </button>
+                    <button id="textBtn" class="mode-btn active">
+                        ⌨️ Type
+                    </button>
+                </div>
+
+                <!-- Voice Input Area -->
+                <div id="voiceInput" class="input-area" style="display: none;">
+                    <button id="recordBtn" class="record-btn">Start Recording</button>
+                    <div id="transcription" class="transcription-box"></div>
+                </div>
+
+                <!-- Text Input Area -->
+                <div id="textInput" class="input-area">
+                    <textarea id="inputText" 
+                             placeholder="Enter your application details in Nepali..."
+                             rows="8"></textarea>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="form-group">
+                    <label for="userName">Full Name</label>
+                    <input type="text" id="userName" placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="userAddress">Address</label>
+                    <input type="text" id="userAddress" placeholder="Your address">
+                </div>
+
+                <div class="form-group">
+                    <label for="wardNumber">Ward Number</label>
+                    <input type="number" id="wardNumber" placeholder="Ward number">
+                </div>
+
+                <!-- Submit Button -->
+                <button id="generateBtn" class="submit-btn">Generate Document</button>
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section" id="outputSection" style="display: none;">
+                <h2>Your Document</h2>
+                <div id="preview" class="document-preview"></div>
+                <div class="action-buttons">
+                    <button id="downloadBtn" class="btn btn-primary">⬇️ Download PDF</button>
+                    <button id="editBtn" class="btn btn-secondary">✏️ Edit</button>
+                    <button id="newBtn" class="btn btn-secondary">➕ Create New</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Sarkari Sarathi | PROTOBYTES 2.0 Hackathon</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/voice.js"></script>
+</body>
+</html>
