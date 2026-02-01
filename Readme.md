@@ -117,7 +117,7 @@ The project follows a **hackathon-optimized, demo-first development approach**:
 - Pitch deck creation
 - Visual storytelling for demo
 
-### Frontend & Demo Support – Team 4 (Vibe Coding)
+### Frontend & Demo Support – Team 4 (Amrit )
 - HTML/CSS/JS frontend wiring
 - Voice input integration
 - Demo flow stabilization
