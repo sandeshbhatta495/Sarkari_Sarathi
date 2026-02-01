@@ -1,0 +1,48 @@
+{
+  "service_id": "electricity_meter",
+  "service_name": "Electricity Meter Connection Application",
+  "service_name_ne": "बिजुली मीटर जडान आवेदन",
+  "language": "ne",
+  "version": "1.0",
+  "description": "Official template for applying for new electricity meter connection at ward level",
+  "required_fields": [
+    "applicant_name",
+    "applicant_address",
+    "ward_number",
+    "purpose_of_connection",
+    "property_details"
+  ],
+  "template_structure": {
+    "header": {
+      "ward_office": "{ward_name} वडा कार्यालय",
+      "zone": "नेपाल विद्युत प्राधिकरण"
+    },
+    "subject": "बिजुली मीटर जडान गरी दिनुहुन् को सम्मानीय निवेदन",
+    "body_template": "सेवा प्रदायक\n{ward_name} वडा कार्यालय\n{ward_number} नम्बर वडा\n{district_name} जिल्ला\n\nस्थान: {city_name}\nमिति: {date}\n\nविषय: बिजुली मीटर जडान गरी दिनुहुन् को निवेदन\n\nसम्मानीय वडा अध्यक्ष महोदय,\n\nयो निवेदन दिईं रहेको हु, मेरो नाम {applicant_name} हो। मैले {property_address} मा नयाँ घर निर्माण गरेको छु। मेरो घर / व्यापार स्थलमा बिजुली जडान गर्न आवश्यकता रहेको छ।\n\nमेरो विस्तृत विवरण निम्नानुसार रहेको छ:\n\n१. नाम: {applicant_name}\n२. ठेगाना: {applicant_address}\n३. वडा नम्बर: {ward_number}\n४. प्रयोजन: {purpose_of_connection}\n५. सम्पत्तिको विवरण: {property_details}\n\nतसर्थ, तपाईंको कार्यालयबाट मेरो बिजुली मीटर जडान गरी दिनु हुन् प्रार्थना गर्दछु।\n\nधन्यवाद।\n\nआवेदकको नाम: {applicant_name}\nहस्ताक्षर: ________________\nमिति: {date}",
+    "footer": {
+      "signature_area": "आवेदकको हस्ताक्षर",
+      "stamp_area": "वडा अध्यक्षको छाप"
+    }
+  },
+  "field_mapping": {
+    "applicant_name": "Applicant's full name",
+    "applicant_address": "Complete address of applicant",
+    "ward_number": "Ward number (1-13)",
+    "purpose_of_connection": "Purpose (Residential/Commercial/Industrial)",
+    "property_details": "Property dimensions and location details",
+    "date": "Current date",
+    "ward_name": "Name of ward office"
+  },
+  "validation_rules": {
+    "applicant_name": "not_empty|min_length:3|max_length:100",
+    "applicant_address": "not_empty|min_length:5",
+    "ward_number": "numeric|min:1|max:13",
+    "purpose_of_connection": "enum:Residential,Commercial,Industrial"
+  },
+  "official_notes": [
+    "Document must be printed on A4 size paper",
+    "Applicant must sign in presence of ward officer",
+    "Ward stamp must be affixed at footer",
+    "Keep a copy for your records"
+  ]
+}
