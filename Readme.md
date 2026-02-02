@@ -1,6 +1,5 @@
 # Sarkari-Sarathi: The AI Digital Scribe
 
-**Hackathon:** PROTOBYTES 2.0  
 **Domain:** E-Governance & Digital Accessibility  
 
 ---
